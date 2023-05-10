@@ -1,0 +1,38 @@
+IF EXISTS(SELECT TOP 1 1 FROM sysobjects WHERE ID = object_id(N'[dbo].[KRTSP_SelitemNotaFiscal]') AND objectproperty(ID,N'isProcedure') = 1)
+	DROP PROCEDURE [dbo].[KRTSP_SelitemNotaFiscal]
+GO
+
+CREATE PROCEDURE [dbo].[KRTSP_SelitemNotaFiscal]
+	@id int = NULL
+
+	AS
+
+	/*
+	Documentação
+	Arquivo Fonte.....: itemNotaFiscal.sql
+	Objetivo..........: Faz um select para mostrar todos os dados da tabela Item Nota Fiscal.
+	Autor.............: Estagiarios PB
+ 	Data..............: 18/03/2022
+	Ex................: EXEC [dbo].[KRTSP_SelitemNotaFiscal]
+	*/
+
+	BEGIN
+		SELECT  inf.id,
+				inf.idNotaFiscal,
+				inf.idEntrega,
+				etp.nome,
+				inf.valor,
+				inf.usuarioCadastro,
+				inf.dataCadastro
+			FROM [dbo].[itemNotaFiscal] inf WITH (NOLOCK)
+			INNER JOIN projetoEtapa pe WITH (NOLOCK)
+					ON pe.id = inf.idProjetoEtapa
+            INNER JOIN etapaTipo etp WITH (NOLOCK)
+                    ON etp.id = pe.idEtapaTipo
+			WHERE inf.id = COALESCE(@id, inf.id)
+
+
+
+	END
+
+GO

@@ -1,0 +1,26 @@
+Projeto - Essa tabela ira armazenar os dados dos projetos que iram ser desenvolvidos 
+Id - Esse capmpo serve para identificar cada linha da tabela 
+IdProjetoEtapas - Esse campo recebe o id da tabela ProjetoEtapas como chave estrangeira
+Nome - Esse campo serve para receber e armazenar o nome do projeto
+Descricao - Esse campo serve para receber e armazenar erxplicação sobre o projeto
+DataEntrega - Esse campo serve para estimar a data de entrega do projeto
+QtdDeMinutos - Esse campo serve para saber quantos minutos o projeto precisara para ser feito
+UsuarioCadastro - Esse campo serve para receber e armazenar os dados que o usuario ira cadastrar
+DataCadastro - Esse campo serve para armazenar a data que os dados do usuario foram cadastrados
+UsuarioUltimaAlteracao - Esse campo serve para receber e armazenar a ultima alteracao que o usuario fez
+DataUltimaAlteracao - Esse campo serve para armazenar a data que a ultima alteração foi feita
+---------------------------------------------------------------------------------------------------------
+UsuarioOpcao - Essa tabela servira para amzenar as opções de sistemas 
+Id - Esse capmpo serve para identificar cada linha da tabela 
+IdUsuario - Esse campo recebe o id da tabela usuario como chave estrangeira
+IdOpcaoSistema - Esse campo recebe o id da tabela OpcaoSistema como chave estrangeira
+UsuarioCadastro - Esse campo serve para receber e armazenar os dados que o usuario(Colaborador) ira cadastrar
+DataCadastro - Esse campo serve para armazenar a data que os dados do usuario(Colaborador) foram cadastrados
+--------------------------------------------------------------------------------------------------------------
+ColaboradorTelefone - Essa tabela servira para armazenar os dados de telofone dos colaboradores
+Id - Esse capmpo serve para identificar cada linha da tabela 
+DDD - Esse capmpo serve para receber e armazenar o DDD do telefone do Colaborador
+Numero - Esse capmpo serve para receber e armazenar o telefone do Colaborador
+UsuarioCadastro - Esse campo serve para receber e armazenar os dados que o usuario(Colaborador) ira cadastrar
+UsuarioUltimaAlteracao - Esse campo serve para receber e armazenar a ultima alteracao que o colaborador fez
+DataUltimaAlteracao - Esse campo serve para armazenar a data que a ultima alteração foi feita por parte do colaborador
