@@ -1,0 +1,14 @@
+body {
+    overflow-y: hidden;
+}
+
+.index-body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #253840;
+}
+
+.index-img-background img {
+    width: 50%;
+    margin-left: 15vw;
+}

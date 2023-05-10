@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #253840;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.form-busca {
+    max-width: 500px;
+    position: absolute;
+    left: 23%;
+    top: 50%;
+    transform: translate(-23%,-50%);
+}
+
+.main-login {
+    width: 70vw;
+    height: 85vh;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.main-direita {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.img-direita {
+    width: 30vw;
+}
+
+.esquerda-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-login {
+    width: 25vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 35px;
+    background: #465459;
+    border-radius: 10px;
+}
+
+.img {
+    width: 2.60vw;
+    height: 4.0vh;
+    max-width: 100%;
+    height: auto;
+    margin-top: 5vh;
+}
+
+.card-login>h1 {
+    font-weight: bold;
+    color: #FFF;
+    margin-bottom: 5vh;
+    margin-top: 3.5vh;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0;
+}
+
+.textfield .placeholder {
+    position: relative;
+    color: #000;
+    display: flex;
+    align-items: center;
+    font-size: larger;
+    bottom: 4vh;
+    left: 1.5vw;
+    transition: all 0.2s;
+    transform-origin: 0% 0%;
+    background: none;
+    pointer-events: none;
+}
+
+.textfield>input:focus{
+    background-color: #ededed;
+}
+
+.textfield input:valid+.placeholder,
+.textfield input:focus+.placeholder {
+    transform: scale(1.0) translateY(-36px);
+    color: #c4c4c4;
+}
+
+.textfield-enviar-email {
+    position: relative;
+    width: 70%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 2.5vh;
+}
+
+.textfield-enviar-email .placeholder-enviar-email {
+    position: absolute;
+    color: #000;
+    display: flex;
+    align-items: center;
+    font-size: larger;
+    margin-bottom: -17px;
+    margin-left: 15px;
+    transition: all 0.2s;
+    transform-origin: 0% 0%;
+    background: none;
+    pointer-events: none;
+}
+
+.textfield-enviar-email>input:focus{
+    background-color: #ededed;
+}
+
+.textfield-enviar-email input:valid+.placeholder-enviar-email,
+.textfield-enviar-email input:focus+.placeholder-enviar-email {
+    transform: scale(1.0) translateY(-26px);
+    color: #c4c4c4;
+}
+
+.textfield-esqueci-senha {
+    width: 160%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.textfield-esqueci-senha .placeholder-esqueci-senha {
+    position: relative;
+    color: #000;
+    display: flex;
+    align-items: center;
+    font-size: larger;
+    margin-top: -35px;
+    margin-left: 15px;
+    transition: all 0.2s;
+    transform-origin: 0% 0%;
+    background: none;
+    pointer-events: none;
+}
+
+.textfield-esqueci-senha>input:focus{
+    background-color: #ededed;
+}
+
+.textfield-esqueci-senha input:valid+.placeholder-esqueci-senha,
+.textfield-esqueci-senha input:focus+.placeholder-esqueci-senha {
+    transform: scale(1.0) translateY(-36px);
+    color: #c4c4c4;
+}
+
+.textfield-trocar-senha {
+    width: 125%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 2.5vh;
+}
+
+.textfield-trocar-senha>input:focus{
+    background-color: #ededed;
+}
+
+.textfield-trocar-senha .placeholder-esqueci-senha {
+    position: relative;
+    color: #000;
+    display: flex;
+    align-items: center;
+    font-size: larger;
+    bottom: 6vh;
+    left: 1.5vw;
+    transition: all 0.2s;
+    transform-origin: 0% 0%;
+    background: none;
+    pointer-events: none;
+}
+
+.textfield-trocar-senha input:valid+.placeholder-esqueci-senha,
+.textfield-trocar-senha input:focus+.placeholder-esqueci-senha {
+    transform: scale(1.0) translateY(-36px);
+}
+
+.input-login {
+    width: 100%;
+    height: 15px;
+    border: none;
+    border-radius: 50px;
+    background-color: #c4c4c4;
+    color: #000;
+    font-size: 1rem;
+    outline: none;
+    margin-bottom: 1%;
+    padding: 5%; 
+}
+
+.input-enviar-email {
+    margin: 2.5vh auto 0 auto;
+    width: 100%;
+    height: 3vh;
+    border: none;
+    border-radius: 50px;
+    background-color: #c4c4c4;
+    color: #000;
+    font-size: 1rem;
+    outline: none;
+    margin-bottom: 1%;
+    padding: 15px;
+    
+}
+
+.input-esqueci-senha {
+    width: 100%;
+    height: 3.7vh;
+    border: none;
+    border-radius: 50px;
+    background-color: #c4c4c4;
+    color: #000;
+    font-size: 1rem;
+    outline: none;
+    margin-bottom: 1%;
+    padding: 0 15px;
+}
+
+.botao-login {
+    width: max-content;
+    padding: 0 30%;
+    height: 4.5vh;
+    margin: 2.5vh auto;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #9AD9A3;
+}
+.botao-login:hover {
+    background-color: #5ABF69;
+    cursor: pointer;
+}
+.botao-login:active {
+    background-color: #5ABF69;
+    transform: translateY(2px);
+}
+
+.link {
+    width: 100%;
+    align-items: left;
+    margin-bottom: 1%;
+}
+.link a {
+    font-size: 1rem;
+    color: #FFF;
+    text-decoration:underline;
+}
+.link a:hover {
+    color: #9AD9A3;
+}
+
+.modal-enviar-email {
+    width: 700px;
+    height:max-content;
+    padding: 2.5% 4% 2.5% 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.modal-enviar-email p {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.modal-esqueci-senha {
+    width: 550px;
+    height:max-content;
+    padding: 2.5% 4% 2.5% 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.modal-esqueci-senha h2 {
+    margin: 0;
+}
+
+.div-button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.form-campos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botao-enviar {
+    width: max-content;
+    padding: 0 5%;
+    height: 4.5vh;
+    margin: 2.5vh auto;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #9AD9A3;
+}
+.botao-enviar:hover {
+    background-color: #5ABF69;
+}
+.botao-enviar:active {
+    background-color: #5ABF69;
+    transform: translateY(2px);
+}
+
+.button-fechar {
+    margin: 0;
+    padding: 1.5%;
+}
+
+.modal-trocar-senha {
+    width: 800px;
+    height:max-content;
+    padding: 2.5% 4% 2.5% 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.modal-trocar-senha h2 {
+    margin: 0;
+}
+
+.input-trocar-senha {
+    margin: 2.5vh auto 0 auto;
+    width: 100%;
+    height: 5vh;
+    border: none;
+    border-radius: 50px;
+    background-color: #c4c4c4;
+    color: #000;
+    font-size: 0.8rem;
+    outline: none;
+    margin-bottom: 1%;
+    padding: 3.75% 18.5vw 3.75% 1.5vw;
+}
+
+.btn-entrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#senhaNovaRepetida {
+    margin-top: -0.1vh;
+}
+
+@media (max-width:801px) {
+    .main-direita {
+        display: none;
+    }
+
+    .card-login {
+        width: 80vw;
+    }
+
+    .main-login {
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    .esquerda-login {
+        width: 60vw;
+    }
+
+    .modal-trocar-senha {
+        width: 80%;
+    }
+
+    .input-trocar-senha {
+        padding: 5% 18.5vw 5% 1.5vw;
+    }
+
+    .modal-enviar-email {
+        width: 80%;
+    }
+
+    .textfield .placeholder {
+        position: relative;
+        color: #000;
+        display: flex;
+        align-items: center;
+        font-size: larger;
+        bottom: 5vh;
+        left: 1.5vw;
+        transition: all 0.2s;
+        transform-origin: 0% 0%;
+        background: none;
+        pointer-events: none;
+    }
+
+    .textfield-enviar-email .placeholder-enviar-email {
+        font-size: 1rem;
+        bottom: 4.75vh;
+        left: 3vw;
+    }
+
+    .input-enviar-email {
+        padding: 15px;
+    }
+
+    .modal-esqueci-senha {
+        width: 500px;
+    }
+
+    .textfield-esqueci-senha .placeholder-esqueci-senha {
+        font-size: 1rem;
+        bottom: 4.75vh;
+        left: 3vw;
+    }
+
+    .textfield-enviar-email .placeholder-enviar-email {
+        font-size: larger;
+        margin-bottom: -20px;
+        margin-left: -10px;
+    }
+
+    .textfield-esqueci-senha {
+        width: 160%;
+        height: 10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 2.5vh;
+    }
+    
+    .textfield-esqueci-senha .placeholder-esqueci-senha {
+        position: relative;
+        color: #000;
+        display: flex;
+        align-items: center;
+        font-size: larger;
+        bottom: 5.25vh;
+        left: 1.5vw;
+        transition: all 0.2s;
+        transform-origin: 0% 0%;
+        background: none;
+        pointer-events: none;
+    }
+}

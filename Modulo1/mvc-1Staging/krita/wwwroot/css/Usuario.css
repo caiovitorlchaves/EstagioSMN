@@ -1,0 +1,362 @@
+body {
+    width: 100vw;
+}
+
+.uk-modal-dialog {
+    background-color: none;
+    border-radius: 50px;
+}
+
+.modal-bloquear {
+    background-color: #253840;
+    border: 1px solid #FA0A0A;
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.modal-bloquear h2 {
+    color: white;
+    margin-top: 2%;
+}
+
+.uk-form-stacked {
+    width: 100%;
+}
+
+.texto-bloquear {
+    width: 80%;
+    height: 100%;
+    background: #FFFFFF;
+    border: 1px solid #FA0A0A;
+    border-radius: 30px;
+    font-size: large;
+    color: black;
+    margin: 0 auto;
+    padding: 2% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.texto-bloquear p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.butoes-bloquear {
+    width: 100%;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.confirmar-bloquear {
+    width: 20%;
+    padding: 1% 0;
+    margin-left: 15%;
+    border: 1px solid #000;
+    background-color: #9AD9A3;
+}
+.confirmar-bloquear:hover {
+    cursor: pointer;
+    background-color: #5ABF69;
+}
+
+.fechar-bloquear {
+    width: 20%;
+    padding: 1% 0;
+    border: 1px solid #000;
+    background-color: #C4C4C4;
+}
+.fechar-bloquear:hover {
+    cursor: pointer;
+    background-color: #898989;
+}
+
+.div-cadastrar {
+    height: 100vh;
+    width: 100vw;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.uk-modal-container .uk-modal-dialog {
+    width: 800px;
+    background-color: #F2F2F2;
+    height: max-content;
+    padding: 1%;
+    border-radius: 20px;
+}
+
+.modal-cadastrar {
+    background-color: #F2F2F2;
+    height: max-content;
+    padding: 1%;
+    border-radius: 20px;
+    width: 80vw;
+}
+
+.inputs-primeira-linha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.username {
+    width: 80%;
+}
+
+.data-bloqueio {
+    width: 37.5%;
+}
+.data-bloqueio input{
+    width: 90%;
+    border-radius: 50px;
+    background-color: #C4C4C4 !important;
+    font-size: large;
+    color: #000 !important;
+}
+
+.permissoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 25px;
+}
+
+.permissoes input{
+    width: 100%;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #C4C4C4 !important;
+    font-size: large;
+    color: #000 !important;
+}
+
+.botoes-editar {
+    width: 100%;
+    font-weight: bold;
+    text-align: right;
+}
+
+.salvar {
+    width: 10%;
+    border-radius: 10px;
+    padding: 1% 0;
+    border: transparent;
+    background-color: #9AD9A3; 
+    color: white;
+}
+.salvar:hover {
+    cursor: pointer;
+    background-color: #5ABF69;
+}
+.salvar:active {
+    transform: translateY(2px);
+}
+
+.limpar {
+    width: 10%;
+    border-radius: 10px;
+    padding: 1% 0;
+    border: transparent;
+    background-color: #C4C4C4;
+}
+.limpar:hover {
+    cursor: pointer;
+    background-color: rgba(37, 56, 64, 0.5);
+}
+.limpar:active {
+    transform: translateY(2px);
+}
+
+#input-email-cadastrar:focus {
+    background-color: #fff;
+}
+
+.botao-busca {
+    margin-bottom: 4vh;
+}
+
+.botao-busca:hover {
+    background-color: #9AD9A3;
+}
+
+.icon-editar-bloquear {
+    width: 50px;
+}
+
+.textfield {
+    width: 50%;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.textfield .placeholder {
+    position: relative;
+    color: #000;
+    display: flex;
+    align-items: center;
+    font-size: larger;
+    bottom: -0.5vh;
+    left: -9vw;
+    transition: all 0.2s;
+    transform-origin: 0% 0%;
+    background: none;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.textfield-cadastrar {
+    width: 50%;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.textfield-cadastrar .placeholder-cadastrar {
+    position: relative;
+    color: #000;
+    display: flex;
+    align-items: center;
+    font-size: larger;
+    margin-top: -32.5px;
+    margin-left: -225px;
+    transition: all 0.2s;
+    transform-origin: 0% 0%;
+    background: none;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.textfield-cadastrar input {
+    width: 82.5%;
+    height: 35px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    color: #000;
+    font-size: large;
+    background-color: #C4C4C4;
+    padding-left: 15px;
+}
+
+.textfield-cadastrar>input:focus{
+    background-color: #ededed;
+}
+
+.textfield-cadastrar input:focus+.placeholder-cadastrar {
+    transform: scale(1.0) translateY(-5vh);
+    color: #c4c4c4;
+    z-index: 2;
+}
+
+.textfield input {
+    width: 80%;
+    height: 1.5vh;
+}
+
+.textfield>input:focus{
+    background-color: #ededed;
+}
+
+.textfield input:focus+.placeholder {
+    transform: scale(1.0) translateY(-11vh);
+    color: #c4c4c4;
+
+    z-index: 2;
+}
+
+.textfield input:focus+.placeholder-criar {
+    transform: scale(1.0) translateY(-5vh);
+
+    z-index: 2;
+}
+
+.textfield-editar {
+    width: 50%;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.textfield-editar .placeholder-editar {
+    position: relative;
+    color: #000;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-top: -75px;
+    margin-left: -165px;
+    transition: all 0.2s;
+    transform-origin: 0% 0%;
+    background: none;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.textfield-editar input {
+    width: 240px;
+    height: 35px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    color: #000;
+    font-size: large;
+    background-color: #C4C4C4;
+    padding-left: 15px;
+}
+
+.textfield-editar>input:focus{
+    background-color: #ededed;
+}
+
+@media (max-width:801px) {
+    .botao-busca {
+        margin-right: 2.5vw;
+    }
+
+    .uk-modal-container .uk-modal-dialog {
+        width: 80%;
+    }
+
+    .textfield-cadastrar .placeholder-cadastrar {
+        margin-top: -32.5px;
+        margin-left: -125px;    
+    }
+
+    .textfield-editar input {
+        width: 135px;
+    }
+
+    .textfield-editar .placeholder-editar {
+        margin-top: -75px;
+        margin-left: -65px;
+    }
+}

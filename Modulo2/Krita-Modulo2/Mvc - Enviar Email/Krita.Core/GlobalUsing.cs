@@ -1,0 +1,13 @@
+global using Krita.Core.Models;
+global using System.Security.Cryptography;
+global using System.Text;
+global using System.Collections.ObjectModel;
+global using Krita.Core.Helpers;
+global using Krita.Core.Dto.Usuario;
+global using System.IdentityModel.Tokens.Jwt;
+global using System.Security.Claims;
+global using Krita.Core.Settings;
+global using Microsoft.IdentityModel.Tokens;
+global using static Krita.Core.Extensions.DecodeToken;
+global using Microsoft.AspNetCore.Http;
+global using System.Text.Json;

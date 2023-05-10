@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krita.Api", "Krita.Api\Krita.Api.csproj", "{8E74EAC8-38B8-4B69-8939-B6094640FEC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krita.Web", "Krita.Web\Krita.Web.csproj", "{BB847950-327C-4AC8-B56E-A6DD15046829}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krita.Core", "Krita.Core\Krita.Core.csproj", "{1C5C2D7B-06F4-4F94-922E-98795E6284E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krita.Data", "Krita.Data\Krita.Data.csproj", "{D278D09C-D072-4614-BD3F-90292D7A94D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E74EAC8-38B8-4B69-8939-B6094640FEC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E74EAC8-38B8-4B69-8939-B6094640FEC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E74EAC8-38B8-4B69-8939-B6094640FEC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E74EAC8-38B8-4B69-8939-B6094640FEC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB847950-327C-4AC8-B56E-A6DD15046829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB847950-327C-4AC8-B56E-A6DD15046829}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB847950-327C-4AC8-B56E-A6DD15046829}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB847950-327C-4AC8-B56E-A6DD15046829}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C5C2D7B-06F4-4F94-922E-98795E6284E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C5C2D7B-06F4-4F94-922E-98795E6284E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C5C2D7B-06F4-4F94-922E-98795E6284E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C5C2D7B-06F4-4F94-922E-98795E6284E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D278D09C-D072-4614-BD3F-90292D7A94D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D278D09C-D072-4614-BD3F-90292D7A94D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D278D09C-D072-4614-BD3F-90292D7A94D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D278D09C-D072-4614-BD3F-90292D7A94D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

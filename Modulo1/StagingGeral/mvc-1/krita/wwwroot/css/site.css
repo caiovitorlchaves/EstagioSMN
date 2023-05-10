@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  margin-bottom: 60px;
+  background-color: #253840!important;
+  height: content;
+  width: 100vw;
+}
+
+.menu {
+  background-color: #465459!important;
+  display: flex!important;
+  justify-content: space-between!important;
+  align-items: center!important;
+  flex-direction: row!important;
+  height: 8vh!important;
+  border-bottom: 1px solid #000;
+}
+
+.colorIconMenu {
+  margin-left: 5vw!important;
+  color: #CCCCCC!important;
+  background-color: none!important;
+  border: none!important;
+}
+
+.uk-offcanvas-close {
+  background-color: transparent;
+  border: none;
+  color: #CCCCCC!important;
+  left: 1.5vw;
+  width: fit-content;
+}
+
+.uk-offcanvas-close:hover {
+  color: #253840!important;
+  cursor: pointer;
+}
+
+.colorIconUser {
+  margin-right: 5vw;
+  color: #CCCCCC !important;
+  border: none;
+}
+.colorIconMenu span {
+  border: none;
+}
+
+.bgMenu {
+  background-color: #465459;
+}
+
+a.textomenu:link {
+  font-size: 1.5rem !important;
+  color: #fff !important;
+  margin-bottom: 5%;
+}
+
+a.textomenu:hover {
+  color: #9AD9A3 !important;
+  margin-left: 1.15vw;
+  transform: scale(120%);
+  transition: .1s ease;
+}
+
+a.textomenu:active {
+  color: #9AD9A3 !important;
+}
+
+#offcanvas-nav {
+  padding-top: 0;
+}
+
+.logoImg img {
+  width: 50%;
+  margin-left: 15vw;
+}
+
+.corAreaUser {
+  border-radius: 15px;
+  background-color: #c4c4c4!important;
+  color: #000;
+}
+
+.linhaHorizontal {
+  width: 100%;
+  border: 1px solid #000!important;
+}
+
+.uk-button-default {
+  border: 0px !important;
+}
+
+.uk-offcanvas-bar{
+  background:#465459 !important;
+}
+
+.sairSpan {
+  color: #666;
+}
+.sairSpan:hover {
+  color: red;
+}

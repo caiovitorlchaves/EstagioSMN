@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+body {
+    background-color: #253840;
+    width: 100vw;
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+.form-busca {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: space-evenly;
+    flex-direction: column;
+}
+
+.form-busca-inputs {
+    margin: 0 auto;
+    width: 92.5vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.form-busca .uk-button {
+    width: 80px;
+    height: 35px;
+    background-color: #C4C4C4;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uk-button span {
+    top: 0;
+}
+
+.div-bloqueado {
+    font-style: normal;
+    font-weight: 700;
+    width: 100vw;
+}
+.div-bloqueado .bloqueado {
+    margin-left: 4.25%;
+    width: 100%;
+}
+.div-bloqueado .uk-radio {
+    margin-left: .5%;
+}
+
+.conteudo {
+    background-color: #253840;
+    width: 100vw;
+    margin: 0 auto;
+}
+.conteudo label {
+    margin-left: 2.85vw;
+}
+.conteudo table {
+    width: 80vw;
+    margin: 5vh auto;
+}
+
+.consulta {
+    background-color: #465459;
+    padding-top: 1%;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.form-busca .input-busca {
+    background-color: #C4C4C4;
+    border-radius: 10px;
+    margin-left: 0.5%;
+}
+
+.form-busca input::placeholder {
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    color: #00000080;
+}
+
+.input-busca:focus {
+    background-color: white;
+    outline: none;
+}
+.consultaOver {
+    opacity: 0.3;
+}
+
+.overlay {
+    display: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bloqueado{
+    color: white;
+}
+
+.resultado .campo{
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    color:white;
+}
+
+.resultado {
+    border-bottom: 1px solid #fff;
+}
+
+.resultado span {
+    width: 50px;
+}
+
+.resultado h1{
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    color:white;
+    font-size: 28px;
+}
+
+.resultado{
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    color:#C4C4C4;
+}
+.conteudo label {
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;    
+}
+.conteudo input{
+    visibility:hidden;
+}
+.conteudo input[type=radio]:checked + label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    
+    color:#9AD9A3;
+    border-bottom: 2px solid #9AD9A3;
+}
+
+.tabelaConsulta {
+    margin: 0 5%;
+    width: 80vw;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+.form-busca-inputs .placeholder {
+    position: relative;
+    padding: 0 4px;
+    color: #00000080;
+    display: flex;
+    align-items: center;
+    font-size: larger;
+    bottom: 0px;
+    right: 500px;
+    transition: all 0.2s;
+    transform-origin: 0% 0%;
+    background: none;
+    pointer-events: none;
+}
+
+.form-busca-inputs>input:focus {
+    background-color: #ededed;
+}
+
+.form-busca-inputs input:focus+.placeholder {
+    transform: scale(1.0) translateY(-36px);
+    color: #c4c4c4;
+}
+
+.form-busca-inputs input:focus+.placeholder {
+    color: #c4c4c4;
+}
+
+.titulo{
+    color: #F2F2F2;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media (max-width:801px) {
+    body {
+        overflow-x: visible;
+    }
+
+    .form-busca-inputs {
+        margin: 0 auto;
+        width: 92.5vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .conteudo {
+        width: max-content;
+    }
+
+    .consulta {
+        width: 100vw;
+    }
+}

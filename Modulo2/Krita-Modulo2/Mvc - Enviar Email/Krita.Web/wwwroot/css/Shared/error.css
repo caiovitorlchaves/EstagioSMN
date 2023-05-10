@@ -1,0 +1,46 @@
+body {
+    background-color: #253840;
+    height: 100vh;
+    width: 100vw;
+}
+
+.conteiner-externo-mensagen-erro {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-mensagem-erro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    height: 200px;
+    background-color: #C4C4C4;
+    padding: 4% 4% 4% 4%;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+.icone-erro {
+    color: red;
+}
+
+@media (max-width:801px) {
+    .container-mensagem-erro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 70vw;
+        height: 25vh;
+        background-color: #C4C4C4;
+        padding: 4% 4% 4% 4%;
+        border-radius: 15px;
+        font-size: 20px;
+    }
+}

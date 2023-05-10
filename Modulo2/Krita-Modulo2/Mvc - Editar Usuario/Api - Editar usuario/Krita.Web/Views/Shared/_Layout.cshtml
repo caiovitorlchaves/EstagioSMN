@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Krita.Web</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/css/uikit.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/Shared/layout.css" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="~/css/Home/index.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib/uikit/css/uikit.min.css">
+</head>
+
+<body>
+    <section class="header">
+        <div class="menu-header">
+            <a class="menu-botao" href="#offcanvas-usage" uk-icon="icon: menu; ratio: 2" uk-toggle></a>
+            <div id="offcanvas-usage" uk-offcanvas>
+                <div class="uk-offcanvas-bar menu-lateral">
+
+
+                    <span class="uk-offcanvas-close menu-fechar" uk-icon="icon: arrow-left; ratio: 2.5"></span>
+
+                    <nav class="menu-nav">
+                        <a class="menu-icon-home" asp-area="" asp-controller="Home" asp-action="Index"
+                            uk-icon="icon: home; ratio: 2"></a>
+                        <a href="#cliente">Cliente</a>
+                        <a href="#colaborador">Colaborador</a>
+                        <a href="#preco">Preço</a>
+                        <a href="#projeto">Projeto</a>
+                        <a href="#usuario">Usuário</a>
+                    </nav>
+                </div>
+            </div>
+            <a href="#" class="menu-perfil" uk-icon="icon: user; ratio: 2"></a>
+        </div>
+    </section>
+
+    <div>
+        @RenderBody()
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit-icons.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.14.3/dist/js/uikit.min.js"></script>
+    <script src="~/lib/uikit/js/uikit-icons.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/uikit/js/uikit.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
