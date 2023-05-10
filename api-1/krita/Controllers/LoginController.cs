@@ -1,0 +1,4 @@
+namespace Krita.Controllers
+{
+
+}
