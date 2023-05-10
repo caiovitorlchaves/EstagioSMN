@@ -1,0 +1,9 @@
+global using System.Net.Mail;
+global using Shared.Interfaces;
+global using Shared.Settings;
+global using System.Text.Json;
+global using Shared.Models;
+global using System.Linq;
+global using System.Net.Http;
+global using Shared.Extensions;
+global using System.ComponentModel.DataAnnotations;
