@@ -1,0 +1,72 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - krita</title>
+    <link rel="stylesheet" type="text/css" href="~/lib/iziToast/css/iziToast.min.css">
+    <link rel="stylesheet" type="text/css" href="~/lib/uikit/css/uikit.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/login.css">
+</head>
+
+<body>
+    <div id="modal-trocar-senha" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical modal-trocar-senha">
+            <form id="form-trocarSenha" class="form-campos">
+                <div class="div-button">
+                    <button class="uk-modal-close-default" type="button" uk-close></button>
+                </div>
+                <h2>Trocar Senha</h2>
+                <div class="textfield-trocar-senha">
+                    <input class="input-trocar-senha" type="email" required spellcheck="false" id="trocar-senha-email" name="email">
+                    <label class="placeholder-esqueci-senha">
+                        E-mail
+                    </label>
+                </div>
+                <div class="textfield-trocar-senha">
+                    <input class="input-trocar-senha" type="password" required spellcheck="false" name="senhaAtual">
+                    <label class="placeholder-esqueci-senha">
+                        Senha Atual
+                    </label>
+                </div>
+                <div class="textfield-trocar-senha">
+                    <input class="input-trocar-senha" type="password" required spellcheck="false" name="novaSenha">
+                    <label class="placeholder-esqueci-senha">
+                        Senha Nova
+                    </label>
+                </div>
+                <div class="textfield-trocar-senha">
+                    <input class="input-trocar-senha" type="password" required spellcheck="false"
+                        name="repitaSenhaNova">
+                    <label class="placeholder-esqueci-senha">
+                        Repita Nova Senha
+                    </label>
+                </div>
+                <input class="botao-enviar" type="submit" name="salvar" value="Salvar"
+                    onclick="login.verificacaoSenha()">
+            </form>
+        </div>
+    </div>
+
+    <script src="~/lib/iziToast/js/iziToast.min.js"></script>
+    <script src="~/lib/uikit/js/uikit-icons.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/uikit/js/uikit.min.js"></script>
+    <script src="~/js/login.js"></script>
+    <script src="~/js/site.js"></script>
+    <script>
+        login.init({
+            urls: {
+                trocarSenha: '@Url.Action("SenhaTrocada", "Login")'
+            }
+        })
+    </script>
+    
+</body>
+
+</html>

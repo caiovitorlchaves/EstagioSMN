@@ -1,0 +1,78 @@
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.menu-fechar {
+    width: fit-content;
+    left: 25px;
+    color: #fff;
+    background-color: #fff;
+    transition: .10s linear;
+}
+
+.menu-fechar:hover {
+    color: #9AD9A3;
+    cursor: pointer;
+    transform: translateX(10%);
+}
+
+.menu-nav {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.menu-nav a {
+    margin-bottom: 5px;
+    text-decoration: none !important;
+    font-size: 1.9rem;
+}
+
+.menu-nav a:hover {
+    color: #9AD9A3 !important;
+    transform: scale(120%) translateX(7.5%);
+    transition: .1s ease;
+}
+
+.menu-header {
+    background-color: #465459;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 70px;
+}
+
+.menu-lateral {
+    background-color: #465459 !important;
+}
+
+.menu-icon-home{
+    margin-top: 50px !important;
+    margin-bottom: 10px !important;
+}
+
+.menu-botao {
+    margin-left: 75px!important;
+    color: #CCCCCC!important;
+    background-color: none!important;
+    border: none!important;
+}
+
+.menu-botao:hover {
+    color: #9AD9A3!important;
+}
+
+.menu-perfil {
+    margin-right: 5vw;
+    color: #CCCCCC !important;
+    border: none;
+    margin-right: 75px !important;
+}
+
+.menu-perfil:hover {
+    color: #9AD9A3!important;
+}

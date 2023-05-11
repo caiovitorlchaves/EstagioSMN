@@ -1,0 +1,4 @@
+Program.cs - Vai iniciar a aplicação. Dentro dele ta o entre point da aplicação, onde a execução vai começar(public static void main(string[] args)
+Para salvar o projeto no GitHub vai na pasta onde o projeto foi criado e na pasta que tem o nome do projeto da um git init *Importante add gitignore no site do GitHub o VisualCode*
+MVC - Model View Controller
+Pra rodar o projeto: Só com o F5 roda com o debug, e CTRL+F5 sem debug

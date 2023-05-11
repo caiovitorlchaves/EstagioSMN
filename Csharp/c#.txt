@@ -1,0 +1,33 @@
+C# é uma linguagem tipada
+int -> 32
+float -> 32
+double -> 64
+decimal -> 128 bit
+using -> importação
+-------------------------
+VARIAVEIS
+int idade; -> Inicia com zero
+tipo nome e ;
+tipo var nome; -> ERRADO
+-------------------------------
+CONSTANTES
+const tipo nome e ; -> Inicia com zero
+const var nome; -> ERRADO
+CONSTANTES SEMPRE EM MAIUSCULO 
+-------------------------------
+NUMEROS INTEIROS
+ushort,uint,ulong nao podem receber numero negativo
+------------------------------
+NUEMOROS REAIS
+float
+double
+decimal
+------------------------------
+bool -> para colocar valor booleano
+-----------------------------------
+object -> lista
+-----------------------------------
+Conversão Implicita
+float valor = 25.8F;
+int outro = 25;
+valor = outro;

@@ -1,0 +1,36 @@
+namespace Krita.Api.Configurations
+{
+    public static class DependencyInjection
+    {
+        public static void AddDependencies(this IServiceCollection services, AppSettings appSettings)
+        {
+            services.AddSingleton(appSettings);
+            var key = Encoding.ASCII.GetBytes(appSettings.TokenSettings.ChaveToken);
+
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(x =>
+            {
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true;
+                x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
+            services.AddControllers();
+            services.AddEndpointsApiExplorer();
+            services.AddSwaggerGen();
+            services.AddScoped<Notification>();
+            services.AddScoped<Connection>();
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            services.AddScoped<ILoginRepository, LoginRepository>();
+        }
+    }
+}

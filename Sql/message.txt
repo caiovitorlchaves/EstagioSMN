@@ -1,0 +1,151 @@
+------------------------------------------- SELECT ------------------------------------------------
+IF EXISTS(SELECT TOP 1 1 FROM sysobjects WHERE ID = object_id(N'[dbo].[KRTSP_Selcolaborador]') AND objectproperty(ID,N'isProcedure') = 1)
+	DROP PROCEDURE [dbo].[KRTSP_Selcolaborador]
+go
+
+CREATE PROCEDURE [dbo].[KRTSP_Selcolaborador]
+	@id int = NULL
+
+	AS
+
+	/*
+	Documentação
+	Arquivo Fonte.....: colaborador.sql
+	Objetivo..........: Faz um select para mostrar todos os dados da tabela colaborador.
+	Autor.............: Estagiarios PB
+ 	Data..............: 15/03/2022
+	Ex................: EXEC [dbo].[KRTSP_selcolaborador]
+	*/
+
+	BEGIN
+		SELECT  id,
+				nome,
+				email,
+				dataAdmissao,
+				dataDemissao,
+				usuarioCadastro,
+				dataCadastro,
+				usuarioUltimaAlteracao,
+				dataUltimaAlteracao
+			FROM [dbo].[colaborador] WITH(NOLOCK)
+			WHERE id = COALESCE(@id, id)
+
+	END
+
+GO
+
+------------------------------------------- INSERT -------------------------------------------
+IF EXISTS(SELECT TOP 1 1 FROM sysobjects WHERE ID = object_id(N'[dbo].[KRTSP_Inscolaborador]') AND objectproperty(ID,N'isProcedure') = 1)
+	DROP PROCEDURE [dbo].[KRTSP_Inscolaborador]
+GO
+
+CREATE PROCEDURE [dbo].[KRTSP_Inscolaborador]
+	@nome			varchar(60),
+	@email			varchar(100),
+	@dataAdmissao	date,
+	@dataDemissao date = NULL,
+	@usuarioCadastro int
+
+	AS
+
+	/*
+	Documentação
+	Arquivo Fonte.....: colaborador.sql
+	Objetivo..........: Insere os colaboradores
+	Autor.............: Estagiarios PB
+ 	Data..............: 15/03/2022 DECLARE @Ret	int
+	Ex................: DECLARE @Ret int
+						EXEC @Ret = [dbo].[KRTSP_Inscolaborador] @nome = 'Emerson Barreto', @email = 'emersinhobarreto7x@smn.com.br', @dataAdmissao = '20220116',  @usuarioCadastro = 007
+						SELECT @Ret AS Retorno
+	*/
+
+	BEGIN
+	DECLARE @varEmail varchar(100)
+		SELECT 
+			@varEmail = email
+		FROM [dbo].[colaborador] WITH (NOLOCK)
+		IF (@varEmail = @email) 
+			RETURN 1
+
+		INSERT INTO [dbo].[colaborador] (nome, email, dataAdmissao, usuarioCadastro) VALUES
+			(@nome, @email, @dataAdmissao, @usuarioCadastro)
+
+		RETURN 0
+	END
+GO
+
+
+------------------------------------------- UPDATE -------------------------------------------
+
+IF EXISTS(SELECT TOP 1 1 FROM sysobjects WHERE ID = object_id(N'[dbo].[KRTSP_Updcolaborador]') AND objectproperty(ID,N'isProcedure') = 1)
+	DROP PROCEDURE [dbo].[KRTSP_Updcolaborador]
+go
+
+CREATE PROCEDURE [dbo].[KRTSP_Updcolaborador]
+	@id							int,
+	@nome						varchar(60),
+	@email						varchar(100),
+	@dataAdmissao				date,
+	@usuarioUltimaAlteracao		int
+
+	AS
+
+	/*
+	Documentação
+	Arquivo Fonte.....: colaborador.sql
+	Objetivo..........: Atualiza os colaboradores
+	Autor.............: Estagiarios PB
+ 	Data..............: 15/03/2022
+	Ex................: EXEC [dbo].[KRTSP_updcolaborador] @id = 10, @nome = 'Ernesto Geisel', @email = 'emersinhobarreto7x@smn.com.br', @dataAdmissao = '20220116', @usuarioUltimaAlteracao = 007
+	*/
+
+	BEGIN
+	DECLARE @varEmail varchar(100)
+		SELECT 
+			@varEmail = email
+		    FROM [dbo].[colaborador] WITH (NOLOCK)
+		IF (@varEmail = @email) 
+			RETURN 1
+
+		UPDATE [dbo].[colaborador]
+			SET nome = @nome,
+				email = @email,
+				dataAdmissao = @dataAdmissao,
+				usuarioUltimaAlteracao = @usuarioUltimaAlteracao,
+				dataUltimaAlteracao = GETDATE()
+			WHERE id = @id
+
+		RETURN 0
+	END
+
+GO
+
+------------------------------------------- DELETE --------------------------------------------
+IF EXISTS(SELECT TOP 1 1 FROM sysobjects WHERE ID = object_id(N'[dbo].[KRTSP_Delcolaborador]') AND objectproperty(ID,N'isProcedure') = 1)
+	DROP PROCEDURE [dbo].[KRTSP_Delcolaborador]
+go
+
+CREATE PROCEDURE [dbo].[KRTSP_Delcolaborador]
+	@id	int
+
+	AS
+
+	/*
+	Documentação
+	Arquivo Fonte.....: usuario.sql
+	Objetivo..........: Deleta os colaboradores selecionados
+	Autor.............: Estagiarios PB
+ 	Data..............: 15/03/2022
+	Ex................: EXEC [dbo].[KRTSP_delcolaborador] @id = 10
+	*/
+
+	BEGIN
+		DELETE FROM [dbo].[colaborador]
+			WHERE id = @id
+
+		RETURN 0
+	END
+
+GO
+
+select * from colaborador

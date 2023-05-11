@@ -1,0 +1,27 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Krita.Web</title>
+    <link rel="stylesheet" type="text/css" href="~/lib/uikit/css/uikit.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/Shared/error.css">
+</head>
+<body>
+    <div class="conteiner-externo-mensagen-erro">
+        <div class="container-mensagem-erro">
+            <p><span class="icone-erro" uk-icon="icon: warning; ratio: 2"></span>  Ops...</p>
+            <p>Aconteceu um erro, por favor contate o suporte!</p>
+        </div>
+    </div>
+    <script src="~/lib/uikit/js/uikit.min.js"></script>
+    <script src="~/lib/uikit/js/uikit-icons.min.js"></script>
+    <script>
+        UIkit.modal('#modal-example').show();
+    </script>
+</body>
+</html>

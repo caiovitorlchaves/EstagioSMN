@@ -1,0 +1,17 @@
+Missão: Criar 2 clientes, 4 departamentos para cada cliente, 3 contatos para cada departamento
+
+1º passo: fazer o INSERT de dois clientes fictícios
+
+2º passo: fazer o INSERT de 4 departamentos para cada cliente
+
+3º passo: fazer o INSERT de 3 contatos para cada departamento (as tabelas relacionadas a contato são "contatoTelefone" para os dados relacionados ao telefone do contato e "contato" para os demais dados)
+
+Modelo -> INSERT INTO nomeTabela (atributo1, atributo2...) VALUES (valor1, valor2...);
+
+Atenção!: fazer os scripts de INSERT para executar amanhã (02/03) no banco de dados!!!
+
+Dica: ao todo, serão 2 inserts para a tabela cliente, 8 inserts para a tabela departamento, 12 inserts para a tabela contato e 12 inserts para a tabela contatoTelefone.
+
+
+
+Usem o repositório do git para consultar os atributos da tabela.

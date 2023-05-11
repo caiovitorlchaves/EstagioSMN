@@ -1,0 +1,8 @@
+Minimundo ou regras de negocio(RN) é uma descrição curta sobre como as coisas devem funcionar.
+O minimundo é o primeiro modelo de desenvolvimento, serve para entender os conceitos da realidade mas sem focar na parte técnica, como o processamento ou na automatização dessas informações.
+Ele é um pedaço de realidade que o analista levantou alguns pontos de interesse para uma organização.
+A partir disso é possível fracionar esse minimundo em partes menores dependendo da complexidade, assim fica mais fácil analisa-lo.
+
+
+Abstração é uma visão que surge com base em uma realidade. É basicamente separar características relevantes de objetos e situações
+

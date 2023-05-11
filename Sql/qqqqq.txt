@@ -1,0 +1,86 @@
+------------------------------------------- SELECT ------------------------------------------------
+IF EXISTS(SELECT TOP 1 1 FROM sysobjects WHERE ID = object_id(N'[dbo].[KRTSP_SeldocumentoTipo]') AND objectproperty(ID,N'isProcedure') = 1)
+    DROP PROCEDURE [dbo].[KRTSP_SeldocumentoTipo]
+go
+
+CREATE PROCEDURE [dbo].[KRTSP_SeldocumentoTipo]
+    @id int = NULL
+
+    AS
+
+    /*
+    Documentação
+    Arquivo Fonte.....: documentoTipo.sql
+    Objetivo..........: Faz um select para mostrar todos os dados da tabela documentoTipo.
+    Autor.............: Estagiarios PB
+     Data..............: 17/03/2022
+    Ex................: EXEC [dbo].[KRTSP_seldocumentoTipo]
+    */
+
+    BEGIN
+        SELECT  id,
+                nome
+            FROM [dbo].[documentoTipo] WITH(NOLOCK)
+            WHERE id = COALESCE(@id, id)
+
+    END
+
+GO
+
+------------------------------------------- SELECT ------------------------------------------------
+IF EXISTS(SELECT TOP 1 1 FROM sysobjects WHERE ID = object_id(N'[dbo].[KRTSP_SelProjetoDocumento]') AND objectproperty(ID,N'isProcedure') = 1)
+    DROP PROCEDURE [dbo].[KRTSP_SelProjetoDocumento]
+go
+
+CREATE PROCEDURE [dbo].[KRTSP_SelProjetoDocumento]
+    @idProjeto int = NULL
+
+    AS
+
+    /*
+    Documentação
+    Arquivo Fonte.....: ProjetoDocumento.sql
+    Objetivo..........: Faz um select para mostrar todos os dados da tabela ProjetoDocumento.
+    Autor.............: Estagiarios PB
+     Data..............: 17/03/2022
+    Ex................: EXEC [dbo].[KRTSP_selProjetoDocumento]
+    */
+
+    BEGIN
+        SELECT  idProjeto,
+                idDocumento
+            FROM [dbo].[ProjetoDocumento] WITH(NOLOCK)
+            WHERE idProjeto = COALESCE(@idProjeto, idProjeto)
+
+    END
+
+GO
+
+------------------------------------------- SELECT ------------------------------------------------
+IF EXISTS(SELECT TOP 1 1 FROM sysobjects WHERE ID = object_id(N'[dbo].[KRTSP_SelentregaDocumento]') AND objectproperty(ID,N'isProcedure') = 1)
+    DROP PROCEDURE [dbo].[KRTSP_SelentregaDocumento]
+go
+
+CREATE PROCEDURE [dbo].[KRTSP_SelentregaDocumento]
+    @idEntrega int = NULL
+
+    AS
+
+    /*
+    Documentação
+    Arquivo Fonte.....: entregaDocumento.sql
+    Objetivo..........: Faz um select para mostrar todos os dados da tabela entregaDocumento.
+    Autor.............: Estagiarios PB
+     Data..............: 17/03/2022
+    Ex................: EXEC [dbo].[KRTSP_selentregaDocumento]
+    */
+
+    BEGIN
+        SELECT  idEntrega,
+                idDocumento
+            FROM [dbo].[entregaDocumento] WITH(NOLOCK)
+            WHERE idEntrega = COALESCE(@identrega, idEntrega)
+
+    END
+
+GO
