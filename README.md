@@ -1,1 +1,2 @@
 # estagiosmn
+Conteúdo do Programa de formação(Estágio) que tive a oportunidade participar no ano de 2022 nos meses de Janeiro a Agosto. Onde tive um prévio treinamento das ferramentas que estão presentes no repository e dividas em branchs e que foram usadas para desenvolver o projeto proposto até onde eu participei. Os conteúdos são de testes que eu fiz durante o treinamento e de partes do projeto que eu fiquei responsável para desenvolver.
